@@ -1,0 +1,62 @@
+.header-link{
+    color: white;
+}
+header , .p1{
+    background-color: #03387d;
+    color: white;
+}
+.b{
+    color: white;
+    width: fit-content;
+    background-color: black;
+    
+}
+.p2{
+    background-color: white;;
+}
+.sidebar {
+    height: 100vh;
+    background-color: black;
+    color: #ffffff;
+    position: fixed; /* Makes the sidebar fixed */
+    top: 0; /* Positioned at the top of the viewport */
+    left: 0; /* Positioned at the left of the viewport */
+    z-index: 1000;
+    margin-top: 69px;
+}
+.sidebar a {
+    color: #ffffff;
+}
+.card {
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0.3, 0.3, 0.3, 0.3);
+ }
+.card-body {
+    padding: 20px;
+}
+
+.dash{
+    background-color: rgb(237, 234, 234); 
+    height: 1000px;
+    
+    margin-left: 241px;
+    margin-top: 200px;
+}
+.topbar{
+    position: fixed; /* Makes the sidebar fixed */
+    top: 0; /* Positioned at the top of the viewport */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.content-center {
+    text-align: center;
+    justify-content: center;
+}
+.task-status-bars{
+    height: 50px;
+}
+
+
+
