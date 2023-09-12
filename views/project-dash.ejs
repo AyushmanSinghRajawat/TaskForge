@@ -99,15 +99,17 @@
               <hr>
               <!-- Existing Boxes -->
               <!-- First Box -->
-              <!-- <div class="col-lg-4 mb-4 ">
+              <% p.forEach(element => {%>
+               <div class="col-lg-4 mb-4 ">
                 <div class="card">
                   <div class="card-body py-4">
-                    <h5 class="card-title"><a href="./task-dash.ejs" class="text-decoration-none">Box 1</a></h5>
-                    <p class="card-text">Content for Box 1 goes here.</p>
+                    <h5 class="card-title"><a href="./task-dash.ejs" class="text-decoration-none"><%=element.name  %></a></h5>
+                    <p class="card-text"><%= element.projectDescription %></p>
                   </div>
                 </div>
-              </div>
-               -->
+              </div> 
+            <%});%>
+               
               <!-- Second Box -->
               <!-- <div class="col-lg-4 mb-4">
                 <div class="card">
@@ -141,27 +143,27 @@
                       </button>
                     </div>
                     <div class="modal-body ">
-                      <form class="row g-3">
+                      <form class="row g-3" action="/project-dash" method="post">
                           <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Project Name</label>
-                            <input type="text" class="form-control" id="inputProjectName">
+                            <input type="text" class="form-control" id="inputProjectName" name="ProjectName">
                           </div>
                           <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Project Key</label>
-                            <input type="password" class="form-control" id="inputProjectKey">
+                            <input type="password" class="form-control" id="inputProjectKey" name="ProjectKey">
                           </div>
                           <div class="col-12">
                             <label for="inputAddress" class="form-label">Project Description</label>
-                            <input type="text" class="form-control" id="inputProjectDescription" placeholder="Enter project description">
+                            <input type="text" class="form-control" id="inputProjectDescription" placeholder="Enter project description" name="ProjectDescription">
                           </div>
                           <div class="col-md-4">
                             <label for="inputAddress2" class="form-label">Project Manager</label>
-                            <input type="text" class="form-control" id="inputProjectManager" placeholder="Enter project manager's name">
+                            <input type="text" class="form-control" id="inputProjectManager" placeholder="Enter project manager's name" name="ProjectManager">
                           </div>
                           
                           <div class="col-md-3">
                             <label for="priority" class="form-label">Priority:</label>
-                              <select class="form-select" id="priority">
+                              <select class="form-select" id="priority" name="ProjectPriority">
                               <option>Low</option>
                               <option>Medium</option>
                               <option>High</option>
@@ -169,19 +171,19 @@
                           </div>
                           <div class="col-md-5">
                             <label for="inputZip" class="form-label">Tags or Categories</label>
-                            <input type="text" class="form-control" id="inputProjectTags">
+                            <input type="text" class="form-control" id="inputProjectTags" name="ProjectTags">
                           </div>
                           <div class="col-md-4">
                               <label for="startDate">Start Date:</label>
-                              <input type="date" class="form-control" id="ProjectstartDate">
+                              <input type="date" class="form-control" id="ProjectstartDate" name="Projectstart">
                             </div>
                             <div class="col-md-4 mb-2">
                               <label for="endDate">End Date:</label>
-                              <input type="date" class="form-control" id="ProjectendDate">
+                              <input type="date" class="form-control" id="ProjectendDate" name="" >
                             </div>
                           
                           <div class="col-12 ">
-                            <button type="submit" id="addBoxBtn" class="btn btn-outline-light border-3 add-box" data-dismiss="modal">Create</button>
+                            <button type="submit" id="addBoxBtn" class="btn btn-outline-light border-3 add-box" >Create</button>
                           </div>
                         </div>
                         </form>
@@ -203,6 +205,6 @@
       
     
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-      <script src="index.js"> </script>
+      <!-- <script src="index.js"> </script> -->
 </body>
 </html>
